@@ -1,8 +1,6 @@
 const filterUpperCase = (letter) => {
-    if(letter == letter.toUpperCase())
-        return true;
-    else 
-        return false;
+    const result = (letter == letter.toUpperCase())? true : false ;
+    return result;
 }
 
 module.exports = filterUpperCase;
