@@ -1,6 +1,5 @@
 const cube = require('./cube');
 const identity = require('./identity');
-const myMethod = require('./myMethod');
 
 describe('Map', () => {
 
@@ -17,8 +16,7 @@ describe('Map', () => {
     });
 
     it('mmap([a{x : 10}],someObject => someObject.x + 1) -> [11]', () => {
-        expect([{x : 10}].map(myMethod)).toEqual([11]);
+        expect([{x : 10}].map(someObject => someObject.x+1)).toEqual([11]);
     });
-
 
 })
