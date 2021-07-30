@@ -1,7 +1,7 @@
 const head = require("./head");
 const tail = require("./tail");
 
-const map = (list1, customFunction) => {
-    return head(list1) === null ? [] : [customFunction(head(list1)), ...map(tail(list1), customFunction)];
+const map = (list, customFunction) => {
+    return head(list) === null ? [] : [customFunction(head(list)), ...map(tail(list), customFunction)];
 }
 module.exports = map;
