@@ -1,8 +1,8 @@
 const head = require("./head");
 const tail = require("./tail");
 
-const filter = (list, condition) => {
+const filter = (list, predicate) => {
     return head(list) === null ? [] : 
-        condition(head(list)) ? [head(list), ...filter(tail(list), condition)] : [...filter(tail(list),condition)];
+        predicate(head(list)) ? [head(list), ...filter(tail(list), predicate)] : [...filter(tail(list),predicate)];
 }
 module.exports = filter;
